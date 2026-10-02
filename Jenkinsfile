@@ -1,8 +1,6 @@
 pipeline {
     agent any
-
     stages {
-
         stage('Build') {
             steps {
                 echo 'Building Docker image...'
@@ -27,7 +25,7 @@ pipeline {
 
                     docker run -d \
                         --name jenkins-demo \
-                        -p 8080:80 \
+                        -p 9000:80 \
                         jenkins-demo:latest
                 '''
             }
